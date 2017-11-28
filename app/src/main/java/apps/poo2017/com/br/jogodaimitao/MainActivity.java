@@ -15,7 +15,7 @@ import apps.poo2017.com.br.jogodaimitao.holderview.HolderView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private HolderView holderView = new HolderView();
+      private HolderView holderView = new HolderView();
 
     @SuppressLint("ResourceAsColor")
     @Override
