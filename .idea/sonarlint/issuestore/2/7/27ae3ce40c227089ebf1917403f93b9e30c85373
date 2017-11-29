@@ -1,10 +1,6 @@
 
-esquid:UselessImportCheck"7Remove this unused import 'android.widget.ImageButton'.(‚ÏÉõÿÿÿÿÿ8›Í¨€,
-rsquid:UselessImportCheck"DRemove this unused import 'android.graphics.drawable.ColorDrawable'.(ÖŸÂ«øÿÿÿÿ8·Ğ‘§€,
-vsquid:UselessImportCheck"HRemove this unused import 'android.support.constraint.ConstraintLayout'.(›×âıÿÿÿÿ8›Í¨€,
-bsquid:UselessImportCheck"4Remove this unused import 'android.widget.TextView'.(„Ë‚ˆÿÿÿÿÿ8›Í¨€,
-csquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(²Ú±
-asquid:UselessImportCheck"3Remove this unused import 'android.graphics.Color'.(øãíòşÿÿÿÿ8÷§€,
-msquid:UselessImportCheck"?Remove this unused import 'android.graphics.drawable.Drawable'.(Á‰º„ùÿÿÿÿ8Ê›ü¦€,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(”­‹×øÿÿÿÿ8İ®Å¨€,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Èİá°8İ®Å¨€,
+U"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(‘ÆÏ½8øÿËÇ€,
+gsquid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(‘ÆÏ½8øÿËÇ€,
+usquid:S00116"YRename this field "pressed_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€º›:8øÿËÇ€,
+vsquid:UselessImportCheck"HRemove this unused import 'android.support.constraint.ConstraintLayout'.(›×âıÿÿÿÿ8øÿËÇ€,
+jsquid:MaximumInheritanceDepth"<This class has 7 parents which is greater than 5 authorized.(ÄÇ‚·8øÿËÇ€,

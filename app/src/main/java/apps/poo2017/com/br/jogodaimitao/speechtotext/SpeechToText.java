@@ -23,7 +23,7 @@ public class SpeechToText implements RecognitionListener{
     private String final_text = "";
     private SpeechRecognizer speechRecognizer;
     private Intent intent;
-    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 3000;
+    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 2000;
 
 
 
@@ -79,6 +79,7 @@ public class SpeechToText implements RecognitionListener{
     @Override
     public void onResults(Bundle results) {
        // retorna o resultado final da audição
+        mainActivity.mViewHolder.textView.setText(final_text);
     /*    mainActivity.toSpeech.falar(text);
         if(text.contains("mudar cor vermelho")){
             mainActivity.setTitleColor(2);
@@ -90,14 +91,13 @@ public class SpeechToText implements RecognitionListener{
        // resultados parciais
         ArrayList matches = partialResults.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
         String result="";
-       // mainActivity.toSpeech.stop();
+
         if(matches!=null){
             for(int i=0; i <matches.size(); i++){
                 result += matches.get(i) + "\n";
             }
         }
-     //   setText(result);
-      //  mainActivity.text.setText(text);
+        final_text = result;
     }
 
     @Override
@@ -110,6 +110,10 @@ public class SpeechToText implements RecognitionListener{
     public void speechOn(){
         speechRecognizer.stopListening();
         speechRecognizer.startListening(intent);
+    }
+
+    public void speechStop(){
+        speechRecognizer.stopListening();
     }
 
 }
