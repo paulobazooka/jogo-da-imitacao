@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 import apps.poo2017.com.br.jogodaimitao.MainActivity;
+import apps.poo2017.com.br.jogodaimitao.R;
 
 /**
  * Classe para converter voz em texto
@@ -79,7 +80,7 @@ public class SpeechToText implements RecognitionListener{
     @Override
     public void onResults(Bundle results) {
        // retorna o resultado final da audição
-        mainActivity.mViewHolder.textView.setText(final_text);
+    mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
     /*    mainActivity.toSpeech.falar(text);
         if(text.contains("mudar cor vermelho")){
             mainActivity.setTitleColor(2);
@@ -98,6 +99,7 @@ public class SpeechToText implements RecognitionListener{
             }
         }
         final_text = result;
+        mainActivity.mViewHolder.textView.setText(final_text);
     }
 
     @Override
@@ -108,6 +110,7 @@ public class SpeechToText implements RecognitionListener{
 
 
     public void speechOn(){
+        mainActivity.mViewHolder.textView.setText("");
         speechRecognizer.stopListening();
         speechRecognizer.startListening(intent);
     }
