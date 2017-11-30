@@ -13,6 +13,7 @@ import java.util.Locale;
 
 import apps.poo2017.com.br.jogodaimitao.MainActivity;
 import apps.poo2017.com.br.jogodaimitao.R;
+import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 
 /**
  * Classe para converter voz em texto
@@ -20,11 +21,11 @@ import apps.poo2017.com.br.jogodaimitao.R;
 
 public class SpeechToText implements RecognitionListener{
 
-    private MainActivity mainActivity;
+    private MainActivity mainActivity = null;
     private String final_text = "";
     private SpeechRecognizer speechRecognizer;
     private Intent intent;
-    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 2000;
+    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 1000;
 
 
 
@@ -79,26 +80,21 @@ public class SpeechToText implements RecognitionListener{
 
     @Override
     public void onResults(Bundle results) {
-       // retorna o resultado final da audição
-    mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
-    /*    mainActivity.toSpeech.falar(text);
-        if(text.contains("mudar cor vermelho")){
-            mainActivity.setTitleColor(2);
-        }*/
+         // retorna o resultado final da audição
+        mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
+        mainActivity.texToSpeech.toPronounce(final_text);
     }
 
     @Override
     public void onPartialResults(Bundle partialResults) {
        // resultados parciais
         ArrayList matches = partialResults.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-        String result="";
-
+        final_text = "";
         if(matches!=null){
             for(int i=0; i <matches.size(); i++){
-                result += matches.get(i) + "\n";
+                final_text += matches.get(i) + "\n";
             }
         }
-        final_text = result;
         mainActivity.mViewHolder.textView.setText(final_text);
     }
 
