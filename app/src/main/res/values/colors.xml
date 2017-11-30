@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="light_blue">#3F51B5</color>
-    <color name="dark_blue">#303F9F</color>
-    <color name="pink">#FF4081</color>
-    <color name="red">#b31414</color>
+    <color name="light_blue">#1C8ADB</color>
+    <color name="dark_blue">#1271b7</color>
+    <color name="green">#47bf1f</color>
+    <color name="red">#be1d1d</color>
+    <color name="yellow">#e29e0a</color>
 </resources>
