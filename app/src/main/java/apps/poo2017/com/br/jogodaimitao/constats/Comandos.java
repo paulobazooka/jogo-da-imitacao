@@ -21,4 +21,10 @@ public enum Comandos {
     Comandos(String valor){
         this.valor = valor;
     }
+
+    @Override
+    public String toString(){
+        super.toString();
+        return this.valor;
+    }
 }
