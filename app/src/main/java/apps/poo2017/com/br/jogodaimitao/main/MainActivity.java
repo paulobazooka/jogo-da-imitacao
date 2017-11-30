@@ -1,4 +1,4 @@
-package apps.poo2017.com.br.jogodaimitao;
+package apps.poo2017.com.br.jogodaimitao.main;
 
 import android.app.ActionBar;
 import android.support.constraint.ConstraintLayout;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import apps.poo2017.com.br.jogodaimitao.R;
 import apps.poo2017.com.br.jogodaimitao.speechtotext.SpeechToText;
 import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 import apps.poo2017.com.br.jogodaimitao.viewholder.ViewHolder;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onDestroy(){
         super.onDestroy();
+        speechToText.speechStop();
         texToSpeech.stopTalking();
         texToSpeech.destroy();
     }

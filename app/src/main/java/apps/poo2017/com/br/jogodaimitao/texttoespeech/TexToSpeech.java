@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-import apps.poo2017.com.br.jogodaimitao.MainActivity;
+import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 
 /**
  * Classe para converter texto em voz

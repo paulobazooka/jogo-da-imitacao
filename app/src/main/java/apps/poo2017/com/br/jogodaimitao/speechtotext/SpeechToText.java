@@ -1,6 +1,5 @@
 package apps.poo2017.com.br.jogodaimitao.speechtotext;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognitionListener;
@@ -11,9 +10,8 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import apps.poo2017.com.br.jogodaimitao.MainActivity;
+import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 import apps.poo2017.com.br.jogodaimitao.R;
-import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 
 /**
  * Classe para converter voz em texto
