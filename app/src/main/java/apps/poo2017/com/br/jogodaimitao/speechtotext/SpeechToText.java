@@ -25,7 +25,7 @@ public class SpeechToText implements RecognitionListener{
     private String final_text = "";
     private SpeechRecognizer speechRecognizer;
     private Intent intent;
-    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 2000;
+    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 1000;
 
 
 
@@ -80,25 +80,21 @@ public class SpeechToText implements RecognitionListener{
 
     @Override
     public void onResults(Bundle results) {
-       // retorna o resultado final da audição
-    mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
-        TexToSpeech texToSpeech = new TexToSpeech(mainActivity);
-
-        texToSpeech.toPronounce(final_text);
+         // retorna o resultado final da audição
+        mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
+        mainActivity.texToSpeech.toPronounce(final_text);
     }
 
     @Override
     public void onPartialResults(Bundle partialResults) {
        // resultados parciais
         ArrayList matches = partialResults.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-        String result="";
-
+        final_text = "";
         if(matches!=null){
             for(int i=0; i <matches.size(); i++){
-                result += matches.get(i) + "\n";
+                final_text += matches.get(i) + "\n";
             }
         }
-        final_text = result;
         mainActivity.mViewHolder.textView.setText(final_text);
     }
 

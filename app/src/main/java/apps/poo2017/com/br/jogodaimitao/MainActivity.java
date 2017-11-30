@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import apps.poo2017.com.br.jogodaimitao.speechtotext.SpeechToText;
+import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 import apps.poo2017.com.br.jogodaimitao.viewholder.ViewHolder;
 
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public ViewHolder mViewHolder;
     private boolean pressed_button = false;
     private SpeechToText speechToText;
+    public TexToSpeech texToSpeech;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         speechToText = new SpeechToText(this);
+        texToSpeech = new TexToSpeech(this);
         mViewHolder = new ViewHolder();
 
+        //
         this.mViewHolder.actionBar = (ActionBar) getActionBar();
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);
         this.mViewHolder.textView = (TextView) findViewById(R.id.textView);
@@ -47,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case (R.id.imageButton):
                 if(!pressed_button){
                     mViewHolder.imageButton.setBackgroundResource(R.mipmap.rec);
+                    texToSpeech.stopTalking();
                     speechToText.speechOn();
                     pressed_button = true;
                 }else{
@@ -56,5 +61,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
         }
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        texToSpeech.stopTalking();
+        texToSpeech.destroy();
     }
 }
