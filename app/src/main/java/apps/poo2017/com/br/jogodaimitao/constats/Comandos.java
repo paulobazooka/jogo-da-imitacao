@@ -7,7 +7,9 @@ package apps.poo2017.com.br.jogodaimitao.constats;
 public enum Comandos {
 
     MUDAR_A_COR("mudar a cor"),
+    MUDAR_COR("mudar cor"),
     TROCAR_A_COR("trocar a cor"),
+    TROCAR_COR("trocar cor"),
     AMARELO("amarelo"),
     AZUL_CLARO("azul claro"),
     AZUL_ESCURO("azul escuro"),
@@ -22,9 +24,8 @@ public enum Comandos {
         this.valor = valor;
     }
 
-    @Override
-    public String toString(){
-        super.toString();
+
+    public String getComando(){
         return this.valor;
     }
 }

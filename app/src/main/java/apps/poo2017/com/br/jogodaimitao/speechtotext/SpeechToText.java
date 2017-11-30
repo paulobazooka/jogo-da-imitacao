@@ -24,7 +24,7 @@ public class SpeechToText implements RecognitionListener{
     private String final_text = "";
     private SpeechRecognizer speechRecognizer;
     private Intent intent;
-    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 1000;
+    private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 3000;
 
 
 
@@ -108,12 +108,24 @@ public class SpeechToText implements RecognitionListener{
 
     public void speechOn(){
         mainActivity.mViewHolder.textView.setText("");
-        speechRecognizer.stopListening();
-        speechRecognizer.startListening(intent);
+        Iniciar iniciar = new Iniciar();
+        iniciar.disparar();
     }
 
     public void speechStop(){
         speechRecognizer.stopListening();
+    }
+
+
+
+    // Classe para disparar uma thread
+    private class Iniciar extends Thread{
+
+        private void disparar() {
+            speechRecognizer.stopListening();
+            speechRecognizer.startListening(intent);
+
+        }
     }
 
 }

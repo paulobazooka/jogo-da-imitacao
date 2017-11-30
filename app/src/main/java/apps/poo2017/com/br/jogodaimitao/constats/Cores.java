@@ -1,26 +1,24 @@
 package apps.poo2017.com.br.jogodaimitao.constats;
 
+import apps.poo2017.com.br.jogodaimitao.R;
+
 /**
  * Enum para controle das cores do texto
  */
 
 public enum Cores {
-    AZUL_ESCURO("dark_blue"),
-    AZUL_CLARO("light_blue"),
-    VERMELHO("red"),
-    AMARELO("yellow"),
-    VERDE("green");
+    AZUL_ESCURO(R.color.dark_blue),
+    AZUL_CLARO(R.color.light_blue),
+    VERMELHO(R.color.red),
+    AMARELO(R.color.yellow),
+    VERDE(R.color.green);
 
-    String cor;
+    int cor;
 
-    Cores(String cor){
+    Cores(int cor){
         this.cor = cor;
     }
 
-    @Override
-    public String toString(){
-        super.toString();
-        return this.cor;
-    }
+
 
 }

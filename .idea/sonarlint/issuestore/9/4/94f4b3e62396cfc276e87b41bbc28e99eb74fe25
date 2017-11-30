@@ -1,8 +1,5 @@
 
-zsquid:S1450"YRemove the "final_text" field and declare it as a local variable in the relevant methods.(•ÖÉÖûÿÿÿÿ8±§¢Í€,
-]squid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è8ºåÒÇ€,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É×ˆ¹8ºåÒÇ€,
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(§×²Ÿøÿÿÿÿ8ºåÒÇ€,
-wsquid:S00116"URename this field "final_text" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÖÉÖûÿÿÿÿ8ºåÒÇ€,
-8squid:S1643"Use a StringBuilder instead.(Ã¬Ëä8ºåÒÇ€,
-–squid:S00116"tRename this field "MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Íážøÿÿÿÿ8ºåÒÇ€,
+8squid:S1643"Use a StringBuilder instead.(Æ–‡Ú8—çíæ€,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É×ˆ¹8Â·¶é€,
+wsquid:S00116"URename this field "final_text" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÖÉÖûÿÿÿÿ8Â·¶é€,
+–squid:S00116"tRename this field "MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¿ÄÄûÿÿÿÿ8Â·¶é€,

@@ -2,7 +2,10 @@ package apps.poo2017.com.br.jogodaimitao.control;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.widget.Toast;
 
 import apps.poo2017.com.br.jogodaimitao.R;
@@ -19,43 +22,41 @@ public class VoiceControl {
     // Objeto para receber a main
     MainActivity mainActivity;
     Context context;
-    private String color = "";
+
 
     public VoiceControl(MainActivity mainActivity){
         this.mainActivity = mainActivity;
         this.context = mainActivity.getApplicationContext();
     }
 
-    @SuppressLint("ResourceAsColor")
+
     public void takesCommand(String command){
 
-          if(command.contains(Comandos.MUDAR_A_COR.toString()) ||
-                  command.contains(Comandos.TROCAR_A_COR.toString())){
+          if(command.contains(Comandos.MUDAR_A_COR.getComando()) ||
+                  command.contains(Comandos.TROCAR_A_COR.getComando()) ||
+                        command.contains(Comandos.TROCAR_COR.getComando()) ||
+                              command.contains(Comandos.MUDAR_COR.getComando())){
+              Log.e("Comando:", command);
 
-
-             if(command.contains(Comandos.AMARELO.toString())){
-                 color = Cores.AMARELO.toString();
+              if(command.contains(Comandos.AMARELO.getComando())){
                  mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.yellow));
-
+                 Log.e("Cor:", "Amarelo");
              }else
-             if(command.contains(Comandos.VERMELHO.toString())){
-                 color = Cores.VERMELHO.toString();
+             if(command.contains(Comandos.VERMELHO.getComando())){
                  mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.red));
-
+                 Log.e("Cor:", "Vermelho");
              }else
-             if(command.contains(Comandos.VERDE.toString())){
-                 color = Cores.VERDE.toString();
+             if(command.contains(Comandos.VERDE.getComando())){
                  mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.green));
-
+                 Log.e("Cor:", "Verde");
              }else
-             if(command.contains(Comandos.AZUL_CLARO.toString())){
-                 color = Cores.AZUL_CLARO.toString();
+             if(command.contains(Comandos.AZUL_CLARO.getComando())){
                  mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.light_blue));
-
+                 Log.e("Cor:", "Azul Claro");
              }else
-             if(command.contains(Comandos.AZUL_ESCURO.toString())){
-                 color = Cores.AZUL_ESCURO.toString();
+             if(command.contains(Comandos.AZUL_ESCURO.getComando())){
                  mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.dark_blue));
+                 Log.e("Cor:", "Azul Escuro");
              }
           }
     }
