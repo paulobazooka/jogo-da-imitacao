@@ -16,4 +16,5 @@ public enum Cores {
     Cores(String cor){
         this.cor = cor;
     }
+
 }

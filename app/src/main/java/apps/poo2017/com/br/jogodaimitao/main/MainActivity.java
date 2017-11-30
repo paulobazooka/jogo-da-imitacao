@@ -1,7 +1,6 @@
 package apps.poo2017.com.br.jogodaimitao.main;
 
 import android.app.ActionBar;
-import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,12 +13,14 @@ import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 import apps.poo2017.com.br.jogodaimitao.viewholder.ViewHolder;
 
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     public ViewHolder mViewHolder;
     private boolean pressed_button = false;
     private SpeechToText speechToText;
     public TexToSpeech texToSpeech;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         speechToText = new SpeechToText(this);
         texToSpeech = new TexToSpeech(this);
         mViewHolder = new ViewHolder();
+
 
         //
         this.mViewHolder.actionBar = (ActionBar) getActionBar();
