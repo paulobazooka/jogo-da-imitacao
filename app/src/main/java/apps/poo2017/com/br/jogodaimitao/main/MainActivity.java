@@ -1,11 +1,14 @@
 package apps.poo2017.com.br.jogodaimitao.main;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import apps.poo2017.com.br.jogodaimitao.R;
 import apps.poo2017.com.br.jogodaimitao.speechtotext.SpeechToText;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public TexToSpeech texToSpeech;
 
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         this.mViewHolder.imageButton.setOnClickListener(this);
     }
+
 
 
     // implementação do método onClick para descobrir quem disparou o evento de click
@@ -66,6 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+
+    // Sobreposição do método que finaliza/destroi a activity
     @Override
     public void onDestroy(){
         super.onDestroy();

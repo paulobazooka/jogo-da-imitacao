@@ -17,4 +17,10 @@ public enum Cores {
         this.cor = cor;
     }
 
+    @Override
+    public String toString(){
+        super.toString();
+        return this.cor;
+    }
+
 }
