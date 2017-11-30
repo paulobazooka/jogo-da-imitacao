@@ -43,8 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         texToSpeech = new TexToSpeech(this);
         mViewHolder = new ViewHolder();
 
-        android.support.v7.app.ActionBar bar = getSupportActionBar();
-        bar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(this, R.color.yellow)));
+
 
         //
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);
