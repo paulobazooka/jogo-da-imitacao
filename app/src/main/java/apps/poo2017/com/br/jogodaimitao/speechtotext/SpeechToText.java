@@ -10,6 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import apps.poo2017.com.br.jogodaimitao.control.VoiceControl;
 import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 import apps.poo2017.com.br.jogodaimitao.R;
 
@@ -81,6 +82,8 @@ public class SpeechToText implements RecognitionListener{
          // retorna o resultado final da audição
         mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
         mainActivity.texToSpeech.toPronounce(final_text);
+        VoiceControl voiceControl = new VoiceControl(mainActivity);
+        voiceControl.takesCommand(final_text);
     }
 
     @Override
