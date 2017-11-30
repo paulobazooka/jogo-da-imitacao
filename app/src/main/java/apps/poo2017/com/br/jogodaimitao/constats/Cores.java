@@ -19,6 +19,8 @@ public enum Cores {
         this.cor = cor;
     }
 
-
+    public int getCor(){
+        return this.cor;
+    }
 
 }
