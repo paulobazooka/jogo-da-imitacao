@@ -1,6 +1,7 @@
 package apps.poo2017.com.br.jogodaimitao.control;
 
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.support.v4.content.ContextCompat;
 
 import apps.poo2017.com.br.jogodaimitao.R;
@@ -20,5 +21,15 @@ public class MainControl {
     public void changeColorActionBar(int color){
         android.support.v7.app.ActionBar bar = mainActivity.getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(mainActivity, color)));
+    }
+
+    public void changeColorText(int color){
+        mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(mainActivity, color));
+    }
+
+    public void changeColorStatusBar(int color){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mainActivity.getWindow().setStatusBarColor(mainActivity.getResources().getColor(color));
+        }
     }
 }

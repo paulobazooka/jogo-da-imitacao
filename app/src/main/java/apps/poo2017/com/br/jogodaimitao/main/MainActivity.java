@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -42,8 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         speechToText = new SpeechToText(this);
         texToSpeech = new TexToSpeech(this);
         mViewHolder = new ViewHolder();
-
-
 
         //
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);

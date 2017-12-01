@@ -41,28 +41,37 @@ public class VoiceControl {
               Log.e("Comando:", command);
 
               if(command.contains(Comandos.AMARELO.getComando())){
-                 mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.yellow));
+                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.yellow));
                  mainControl.changeColorActionBar(Cores.AMARELO.getCor());
+                 mainControl.changeColorText(Cores.AMARELO.getCor());
+                 mainControl.changeColorStatusBar(Cores.AMARELO.getCor());
                  Log.e("Cor:", "Amarelo");
              }else
              if(command.contains(Comandos.VERMELHO.getComando())){
-                 mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.red));
+                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.red));
                  mainControl.changeColorActionBar(Cores.VERMELHO.getCor());
+                 mainControl.changeColorText(Cores.VERMELHO.getCor());
+                 mainControl.changeColorStatusBar(Cores.VERMELHO.getCor());
                  Log.e("Cor:", "Vermelho");
              }else
              if(command.contains(Comandos.VERDE.getComando())){
-                 mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.green));
+                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.green));
                  mainControl.changeColorActionBar(Cores.VERDE.getCor());
+                 mainControl.changeColorText(Cores.VERDE.getCor());
+                 mainControl.changeColorStatusBar(Cores.VERDE.getCor());
                  Log.e("Cor:", "Verde");
              }else
              if(command.contains(Comandos.AZUL_CLARO.getComando())){
                  mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.light_blue));
-                 mainControl.changeColorActionBar(Cores.AZUL_CLARO.getCor());
+                 mainControl.changeColorText(Cores.AZUL_CLARO.getCor());
+                 mainControl.changeColorStatusBar(Cores.AZUL_CLARO.getCor());
                  Log.e("Cor:", "Azul Claro");
              }else
              if(command.contains(Comandos.AZUL_ESCURO.getComando())){
-                 mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.dark_blue));
+                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.dark_blue));
                  mainControl.changeColorActionBar(Cores.AZUL_ESCURO.getCor());
+                 mainControl.changeColorText(Cores.AZUL_ESCURO.getCor());
+                 mainControl.changeColorStatusBar(Cores.AZUL_ESCURO.getCor());
                  Log.e("Cor:", "Azul Escuro");
              }
           }
