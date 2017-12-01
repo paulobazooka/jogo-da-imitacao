@@ -10,6 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import apps.poo2017.com.br.jogodaimitao.control.TextUpdate;
 import apps.poo2017.com.br.jogodaimitao.control.VoiceControl;
 import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 import apps.poo2017.com.br.jogodaimitao.R;
@@ -90,12 +91,14 @@ public class SpeechToText implements RecognitionListener{
     public void onPartialResults(Bundle partialResults) {
        // resultados parciais
         ArrayList matches = partialResults.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+        TextUpdate textUpdate = new TextUpdate();
         final_text = "";
         if(matches!=null){
             for(int i=0; i <matches.size(); i++){
                 final_text += matches.get(i) + "\n";
             }
         }
+        textUpdate.setText(final_text);
         mainActivity.mViewHolder.textView.setText(final_text);
     }
 

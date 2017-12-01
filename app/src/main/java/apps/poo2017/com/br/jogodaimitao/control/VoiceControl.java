@@ -14,7 +14,7 @@ import apps.poo2017.com.br.jogodaimitao.constats.Cores;
 import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 
 /**
- * Created by bazooka on 30/11/17.
+ * Classe para controle de voz
  */
 
 public class VoiceControl {

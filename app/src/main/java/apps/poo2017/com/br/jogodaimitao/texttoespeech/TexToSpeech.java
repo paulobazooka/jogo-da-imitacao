@@ -41,6 +41,8 @@ public class TexToSpeech extends Application implements TextToSpeech.OnInitListe
         textToSpeech.stop();
     }
 
+
+
     @Override
     public void onInit(int status) {
 

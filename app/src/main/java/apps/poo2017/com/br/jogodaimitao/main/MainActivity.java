@@ -52,10 +52,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!pressed_button){
             this.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
         }
+
+
         this.mViewHolder.imageButton.setOnClickListener(this);
 
-        if(mViewHolder.actionBar != null) Log.i("ActionBar", "Não nulo");
-        else Log.i("ActionBar", "Nulo");
     }
 
 

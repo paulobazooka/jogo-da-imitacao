@@ -7,3 +7,13 @@ P
 Qapp/src/main/java/apps/poo2017/com/br/jogodaimitao/texttoespeech/TexToSpeech.java,7/9/793b5dc9a126d7780be9d71a0eeb0d8c41454c04
 y
 Iapp/src/main/java/apps/poo2017/com/br/jogodaimitao/main/MainActivity.java,3/2/325f3d6f5d570468bbb565ce3441de1364d28bf8
+|
+Lapp/src/main/java/apps/poo2017/com/br/jogodaimitao/control/VoiceControl.java,8/4/841db050feaf6b1587afe804e83357927d7a515c
+y
+Iapp/src/main/java/apps/poo2017/com/br/jogodaimitao/constats/Comandos.java,3/1/319d3e1e2947cf4a3e9c2b128b8d857069200cb6
+v
+Fapp/src/main/java/apps/poo2017/com/br/jogodaimitao/constats/Cores.java,e/5/e5e6d95eef4c90eda9dcdb35abd581c7aeb74fdc
+{
+Kapp/src/main/java/apps/poo2017/com/br/jogodaimitao/control/MainControl.java,3/8/380211808fa39205c2dd897ab20e64e7d025194c
+}
+Mapp/src/main/java/apps/poo2017/com/br/jogodaimitao/viewholder/ViewHolder.java,6/7/67846343a83f5d9011a2dacd9a3eb9c72884baa7
