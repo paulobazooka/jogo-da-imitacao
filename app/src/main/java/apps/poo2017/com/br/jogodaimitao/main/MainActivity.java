@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import apps.poo2017.com.br.jogodaimitao.R;
+import apps.poo2017.com.br.jogodaimitao.constats.MicrophoneImage;
 import apps.poo2017.com.br.jogodaimitao.speechtotext.SpeechToText;
 import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 import apps.poo2017.com.br.jogodaimitao.viewholder.ViewHolder;
@@ -68,12 +69,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case (R.id.imageButton):
                 if(!pressed_button){
-                    mViewHolder.imageButton.setBackgroundResource(R.mipmap.rec);
+                    mViewHolder.imageButton.setBackgroundResource(
+                            MicrophoneImage.REC_MODE.getMicrophoneId());
                     texToSpeech.stopTalking();
                     speechToText.speechOn();
                     pressed_button = true;
                 }else{
-                    mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
+                    mViewHolder.imageButton.setBackgroundResource(
+                            MicrophoneImage.NORMAL_MODE.getMicrophoneId());
                     speechToText.speechStop();
                     pressed_button = false;
                 }
