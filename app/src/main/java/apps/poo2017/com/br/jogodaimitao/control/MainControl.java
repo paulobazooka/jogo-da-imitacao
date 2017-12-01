@@ -9,10 +9,14 @@ import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 
 /**
  * Classe para controlar mainActivity
+ *  Responsável pela mudança das cores e da imagem do ImageButton
  */
 
 public class MainControl {
+
     private MainActivity mainActivity;
+    private static boolean changedButtonImage = false;
+
 
     public MainControl(MainActivity mainActivity){
         this.mainActivity = mainActivity;
@@ -31,5 +35,9 @@ public class MainControl {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             mainActivity.getWindow().setStatusBarColor(mainActivity.getResources().getColor(color));
         }
+    }
+
+    public void changeButtonImage(){
+        // implementar...
     }
 }
