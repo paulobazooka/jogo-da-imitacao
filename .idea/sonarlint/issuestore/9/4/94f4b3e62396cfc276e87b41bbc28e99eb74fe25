@@ -1,5 +1,6 @@
 
-8squid:S1643"Use a StringBuilder instead.(Æ–‡Ú8—çíæ€,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É×ˆ¹8Â·¶é€,
-wsquid:S00116"URename this field "final_text" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÖÉÖûÿÿÿÿ8Â·¶é€,
-–squid:S00116"tRename this field "MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì¿ÄÄûÿÿÿÿ8Â·¶é€,
+fsquid:S2134"EStop extending the Thread class as the "run" method is not overridden(¡“…Êøÿÿÿÿ8‡’ù€,
+wsquid:S00116"URename this field "final_text" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÖÉÖûÿÿÿÿ8‡’ù€,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É×ˆ¹8‡’ù€,
+–squid:S00116"tRename this field "MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÜŒûÿÿÿÿ8‡’ù€,
+8squid:S1643"Use a StringBuilder instead.(Æ–‡Ú8‡’ù€,

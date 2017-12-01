@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -43,8 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         texToSpeech = new TexToSpeech(this);
         mViewHolder = new ViewHolder();
 
-
-
         //
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);
         this.mViewHolder.textView = (TextView) findViewById(R.id.textView);
@@ -52,10 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!pressed_button){
             this.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
         }
+
+
         this.mViewHolder.imageButton.setOnClickListener(this);
 
-        if(mViewHolder.actionBar != null) Log.i("ActionBar", "Não nulo");
-        else Log.i("ActionBar", "Nulo");
     }
 
 
