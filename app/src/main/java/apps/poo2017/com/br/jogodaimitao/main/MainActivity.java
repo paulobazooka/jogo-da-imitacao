@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,9 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);
         this.mViewHolder.textView = (TextView) findViewById(R.id.textView);
+        this.mViewHolder.progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         if(!pressed_button){
-            this.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
+            this.mViewHolder.imageButton.setBackgroundResource(MicrophoneImage.NORMAL_MODE.getMicrophoneId());
         }
 
 
@@ -77,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else{
                     mViewHolder.imageButton.setBackgroundResource(
                             MicrophoneImage.NORMAL_MODE.getMicrophoneId());
+                    texToSpeech.stopTalking();
                     speechToText.speechStop();
                     pressed_button = false;
                 }

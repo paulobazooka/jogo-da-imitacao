@@ -26,11 +26,15 @@ public class SpeechToText implements RecognitionListener{
     private SpeechRecognizer speechRecognizer;
     private Intent intent;
     private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 3000;
-
+    private Iniciar iniciar;
+    private TextUpdate textUpdate;
 
 
     public SpeechToText(MainActivity mainActivity){
         this.mainActivity = mainActivity;
+
+        textUpdate = new TextUpdate();
+        iniciar = new Iniciar();
 
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(mainActivity.getApplicationContext());
         speechRecognizer.setRecognitionListener(this);
@@ -49,57 +53,63 @@ public class SpeechToText implements RecognitionListener{
     @Override
     public void onReadyForSpeech(Bundle params) {
       // Pronto para gravar o som
+        Log.d("onReadyForSpeech", "" );
     }
 
     @Override
     public void onBeginningOfSpeech() {
       // Inicio da audição do som
+        Log.d("onBeginningOfSpeech()", "" );
     }
 
     @Override
     public void onRmsChanged(float rmsdB) {
        // retorna o nível de decibéis do som
+        Log.d("onRmsChanged", "" + rmsdB);
     }
 
     @Override
     public void onBufferReceived(byte[] buffer) {
        // Quando o Buffer estiver cheio
+        Log.d("onBufferReceived", "" );
     }
 
     @Override
     public void onEndOfSpeech() {
        // Fim da audição
+        Log.d("onEndOfSpeech()", "" );
     }
 
     @Override
     public void onError(int error) {
       // metodo que retorna o erro
         Log.d("onError", "");
-        speechRecognizer.stopListening();
     }
 
     @Override
     public void onResults(Bundle results) {
          // retorna o resultado final da audição
         mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
-        mainActivity.texToSpeech.toPronounce(final_text);
+        mainActivity.texToSpeech.toPronounce(textUpdate.getText());
         VoiceControl voiceControl = new VoiceControl(mainActivity);
-        voiceControl.takesCommand(final_text);
+        voiceControl.takesCommand(textUpdate.getText());
+        iniciar.parar();
     }
 
     @Override
     public void onPartialResults(Bundle partialResults) {
        // resultados parciais
         ArrayList matches = partialResults.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-        TextUpdate textUpdate = new TextUpdate();
         final_text = "";
+
         if(matches!=null){
             for(int i=0; i <matches.size(); i++){
                 final_text += matches.get(i) + "\n";
             }
         }
+
         textUpdate.setText(final_text);
-        mainActivity.mViewHolder.textView.setText(final_text);
+        mainActivity.mViewHolder.textView.setText(textUpdate.getText());
     }
 
     @Override
@@ -111,12 +121,11 @@ public class SpeechToText implements RecognitionListener{
 
     public void speechOn(){
         mainActivity.mViewHolder.textView.setText("");
-        Iniciar iniciar = new Iniciar();
         iniciar.disparar();
     }
 
     public void speechStop(){
-        speechRecognizer.stopListening();
+            iniciar.parar();
     }
 
 
@@ -125,9 +134,15 @@ public class SpeechToText implements RecognitionListener{
     private class Iniciar extends Thread{
 
         private void disparar() {
-            speechRecognizer.stopListening();
+            this.parar();
+            Log.d("Thread","disparar");
             speechRecognizer.startListening(intent);
+        }
 
+        private void parar(){
+            Log.d("Thread","parar");
+            speechRecognizer.stopListening();
+            this.interrupt();
         }
     }
 
