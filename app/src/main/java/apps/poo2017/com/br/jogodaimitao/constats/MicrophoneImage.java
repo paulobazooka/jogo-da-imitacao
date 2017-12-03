@@ -8,7 +8,7 @@ import apps.poo2017.com.br.jogodaimitao.R;
 
 public enum MicrophoneImage {
     NORMAL_MODE(R.mipmap.microphone),
-    REC_MODE(R.mipmap.rec);
+    REC_MODE(R.mipmap.rec2);
 
     int mic;
 
