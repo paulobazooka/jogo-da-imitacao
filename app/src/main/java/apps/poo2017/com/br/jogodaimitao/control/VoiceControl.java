@@ -16,14 +16,10 @@ import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 public class VoiceControl {
 
     // Objeto para receber a main
-    MainActivity mainActivity;
-    Context context;
-    MainControl mainControl;
+    private MainControl mainControl;
 
 
     public VoiceControl(MainActivity mainActivity){
-        this.mainActivity = mainActivity;
-        this.context = mainActivity.getApplicationContext();
         mainControl = new MainControl(mainActivity);
     }
 

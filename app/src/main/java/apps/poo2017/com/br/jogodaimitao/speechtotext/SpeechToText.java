@@ -102,6 +102,7 @@ public class SpeechToText implements RecognitionListener{
     public void onResults(Bundle results) {
          // retorna o resultado final da audição
         viewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
+
         mainActivity.texToSpeech.toPronounce(textUpdate.getText());
 
         VoiceControl voiceControl = new VoiceControl(mainActivity);
@@ -123,6 +124,7 @@ public class SpeechToText implements RecognitionListener{
         }
 
         textUpdate.setText(final_text);
+
         viewHolder.textView.setText(textUpdate.getText());
     }
 
