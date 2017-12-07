@@ -1,8 +1,9 @@
 
-8squid:S1643"Use a StringBuilder instead.(Æ–‡Ú8à¦çˆƒ,
-fsquid:S2134"EStop extending the Thread class as the "run" method is not overridden(¡“…Êøÿÿÿÿ8Ñ«…ò,
-zsquid:S1450"YRemove the "final_text" field and declare it as a local variable in the relevant methods.(•ÖÉÖûÿÿÿÿ8‡øØ‰ƒ,
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É×ˆ¹8‡øØ‰ƒ,
-wsquid:S00116"URename this field "final_text" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÖÉÖûÿÿÿÿ8‡øØ‰ƒ,
-–squid:S00116"tRename this field "MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÜŒûÿÿÿÿ8‡øØ‰ƒ,
->squid:S2131"Use "Float.toString" instead.(Ğª ßøÿÿÿÿ8‡øØ‰ƒ,
+8squid:S1643"Use a StringBuilder instead.(Æ–‡Ú8äó­ƒ,
+zsquid:S1450"YRemove the "final_text" field and declare it as a local variable in the relevant methods.(•ÖÉÖûÿÿÿÿ8äó­ƒ,
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É×ˆ¹8äó­ƒ,
+fsquid:S2134"EStop extending the Thread class as the "run" method is not overridden(¡“…Êøÿÿÿÿ8äó­ƒ,
+wsquid:S00116"URename this field "final_text" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÖÉÖûÿÿÿÿ8äó­ƒ,
+–squid:S00116"tRename this field "MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÜŒûÿÿÿÿ8äó­ƒ,
+€squid:UselessImportCheck"WRemove this unused import 'apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech'.(‚˜¨÷8äó­ƒ,
+>squid:S2131"Use "Float.toString" instead.(Ğª ßøÿÿÿÿ8äó­ƒ,

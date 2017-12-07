@@ -9,15 +9,9 @@ y
 Iapp/src/main/java/apps/poo2017/com/br/jogodaimitao/main/MainActivity.java,3/2/325f3d6f5d570468bbb565ce3441de1364d28bf8
 |
 Lapp/src/main/java/apps/poo2017/com/br/jogodaimitao/control/VoiceControl.java,8/4/841db050feaf6b1587afe804e83357927d7a515c
-y
-Iapp/src/main/java/apps/poo2017/com/br/jogodaimitao/constats/Comandos.java,3/1/319d3e1e2947cf4a3e9c2b128b8d857069200cb6
-v
-Fapp/src/main/java/apps/poo2017/com/br/jogodaimitao/constats/Cores.java,e/5/e5e6d95eef4c90eda9dcdb35abd581c7aeb74fdc
 {
 Kapp/src/main/java/apps/poo2017/com/br/jogodaimitao/control/MainControl.java,3/8/380211808fa39205c2dd897ab20e64e7d025194c
 }
 Mapp/src/main/java/apps/poo2017/com/br/jogodaimitao/viewholder/ViewHolder.java,6/7/67846343a83f5d9011a2dacd9a3eb9c72884baa7
-€
-Papp/src/main/java/apps/poo2017/com/br/jogodaimitao/constats/MicrophoneImage.java,9/4/94835fa8ace69e9e693df4a6f85f7a635e6f6346
 z
 Japp/src/main/java/apps/poo2017/com/br/jogodaimitao/control/TextUpdate.java,2/c/2c7319d161be7adf4961c0e46e16635be16d310b
