@@ -5,10 +5,21 @@ package apps.poo2017.com.br.jogodaimitao.control;
  */
 
 public class TextUpdate {
+
     private String text = "";
+    private static TextUpdate textUpdate;
 
-    public TextUpdate(){
+    protected TextUpdate(){
 
+    }
+
+
+    public static TextUpdate getInstance(){
+        if(textUpdate == null){
+            textUpdate = new TextUpdate();
+        }
+
+        return textUpdate;
     }
 
     public void setText(String text){

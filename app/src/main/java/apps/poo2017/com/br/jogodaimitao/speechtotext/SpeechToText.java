@@ -15,6 +15,7 @@ import apps.poo2017.com.br.jogodaimitao.control.VoiceControl;
 import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 import apps.poo2017.com.br.jogodaimitao.R;
 import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
+import apps.poo2017.com.br.jogodaimitao.viewholder.ViewHolder;
 
 /**
  * Classe para converter voz em texto
@@ -29,12 +30,17 @@ public class SpeechToText implements RecognitionListener{
     private int MINIMUM_LENGTH_FOR_EXTRA_SPEECH_IN_MILLIS = 3000;
     private Iniciar iniciar;
     private TextUpdate textUpdate;
+    private ViewHolder viewHolder;
 
 
     public SpeechToText(MainActivity mainActivity){
         this.mainActivity = mainActivity;
 
-        textUpdate = new TextUpdate();
+        // implementação do singleton
+        textUpdate = TextUpdate.getInstance();
+        viewHolder = ViewHolder.getInstance();
+
+        // Instanciação da thread
         iniciar = new Iniciar();
 
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(mainActivity.getApplicationContext());
@@ -71,7 +77,7 @@ public class SpeechToText implements RecognitionListener{
         int vol = (int)rmsdB + 2;
         vol = vol * 8;
 
-        mainActivity.mViewHolder.progressBar.setProgress(vol);
+        viewHolder.progressBar.setProgress(vol);
     }
 
     @Override
@@ -95,7 +101,7 @@ public class SpeechToText implements RecognitionListener{
     @Override
     public void onResults(Bundle results) {
          // retorna o resultado final da audição
-        mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
+        viewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
         mainActivity.texToSpeech.toPronounce(textUpdate.getText());
 
         VoiceControl voiceControl = new VoiceControl(mainActivity);
@@ -117,7 +123,7 @@ public class SpeechToText implements RecognitionListener{
         }
 
         textUpdate.setText(final_text);
-        mainActivity.mViewHolder.textView.setText(textUpdate.getText());
+        viewHolder.textView.setText(textUpdate.getText());
     }
 
     @Override
@@ -128,7 +134,7 @@ public class SpeechToText implements RecognitionListener{
 
 
     public void speechOn(){
-        mainActivity.mViewHolder.textView.setText("");
+        viewHolder.textView.setText("");
         iniciar.disparar();
     }
 
