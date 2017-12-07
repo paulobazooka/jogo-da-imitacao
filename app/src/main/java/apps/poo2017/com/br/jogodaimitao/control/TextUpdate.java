@@ -23,7 +23,7 @@ public class TextUpdate {
     }
 
     public void setText(String text){
-        this.text = text;
+        this.text = text.toLowerCase();
     }
 
     public String getText(){
