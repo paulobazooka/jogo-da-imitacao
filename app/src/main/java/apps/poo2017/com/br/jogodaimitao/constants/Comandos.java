@@ -1,4 +1,4 @@
-package apps.poo2017.com.br.jogodaimitao.constats;
+package apps.poo2017.com.br.jogodaimitao.constants;
 
 /**
  * Enum para controle dos comandos de voz
@@ -14,7 +14,9 @@ public enum Comandos {
     AZUL_CLARO("azul claro"),
     AZUL_ESCURO("azul escuro"),
     VERMELHO("vermelho"),
-    VERDE("verde");
+    VERDE("verde"),
+    CINZA("cinza"),
+    PRETO("preto");
 
 
 

@@ -1,4 +1,4 @@
-package apps.poo2017.com.br.jogodaimitao.constats;
+package apps.poo2017.com.br.jogodaimitao.constants;
 
 import apps.poo2017.com.br.jogodaimitao.R;
 
@@ -11,7 +11,9 @@ public enum Cores {
     AZUL_CLARO(R.color.light_blue),
     VERMELHO(R.color.red),
     AMARELO(R.color.yellow),
-    VERDE(R.color.green);
+    VERDE(R.color.green),
+    CINZA(R.color.gray),
+    PRETO(R.color.black);
 
     int cor;
 

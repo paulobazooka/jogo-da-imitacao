@@ -1,16 +1,12 @@
 package apps.poo2017.com.br.jogodaimitao.control;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.widget.Toast;
 
 import apps.poo2017.com.br.jogodaimitao.R;
-import apps.poo2017.com.br.jogodaimitao.constats.Comandos;
-import apps.poo2017.com.br.jogodaimitao.constats.Cores;
+import apps.poo2017.com.br.jogodaimitao.constants.Comandos;
+import apps.poo2017.com.br.jogodaimitao.constants.Cores;
 import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 
 /**
@@ -41,21 +37,18 @@ public class VoiceControl {
               Log.e("Comando:", command);
 
               if(command.contains(Comandos.AMARELO.getComando())){
-                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.yellow));
                  mainControl.changeColorActionBar(Cores.AMARELO.getCor());
                  mainControl.changeColorText(Cores.AMARELO.getCor());
                  mainControl.changeColorStatusBar(Cores.AMARELO.getCor());
                  Log.e("Cor:", "Amarelo");
              }else
              if(command.contains(Comandos.VERMELHO.getComando())){
-                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.red));
                  mainControl.changeColorActionBar(Cores.VERMELHO.getCor());
                  mainControl.changeColorText(Cores.VERMELHO.getCor());
                  mainControl.changeColorStatusBar(Cores.VERMELHO.getCor());
                  Log.e("Cor:", "Vermelho");
              }else
              if(command.contains(Comandos.VERDE.getComando())){
-                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.green));
                  mainControl.changeColorActionBar(Cores.VERDE.getCor());
                  mainControl.changeColorText(Cores.VERDE.getCor());
                  mainControl.changeColorStatusBar(Cores.VERDE.getCor());
@@ -68,12 +61,24 @@ public class VoiceControl {
                  Log.e("Cor:", "Azul Claro");
              }else
              if(command.contains(Comandos.AZUL_ESCURO.getComando())){
-                // mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.dark_blue));
                  mainControl.changeColorActionBar(Cores.AZUL_ESCURO.getCor());
                  mainControl.changeColorText(Cores.AZUL_ESCURO.getCor());
                  mainControl.changeColorStatusBar(Cores.AZUL_ESCURO.getCor());
                  Log.e("Cor:", "Azul Escuro");
+             }else
+             if(command.contains(Comandos.CINZA.getComando())){
+                 mainControl.changeColorActionBar(Cores.CINZA.getCor());
+                 mainControl.changeColorText(Cores.CINZA.getCor());
+                 mainControl.changeColorStatusBar(Cores.CINZA.getCor());
+                 Log.e("Cor:", "Cinza");
+             }else
+             if(command.contains(Comandos.PRETO.getComando())){
+                 mainControl.changeColorActionBar(Cores.PRETO.getCor());
+                 mainControl.changeColorText(Cores.PRETO.getCor());
+                 mainControl.changeColorStatusBar(Cores.PRETO.getCor());
+                 Log.e("Cor:", "Preto");
              }
+
           }
     }
 

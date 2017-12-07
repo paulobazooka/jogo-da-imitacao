@@ -19,3 +19,5 @@ Kapp/src/main/java/apps/poo2017/com/br/jogodaimitao/control/MainControl.java,3/
 Mapp/src/main/java/apps/poo2017/com/br/jogodaimitao/viewholder/ViewHolder.java,6/7/67846343a83f5d9011a2dacd9a3eb9c72884baa7
 €
 Papp/src/main/java/apps/poo2017/com/br/jogodaimitao/constats/MicrophoneImage.java,9/4/94835fa8ace69e9e693df4a6f85f7a635e6f6346
+z
+Japp/src/main/java/apps/poo2017/com/br/jogodaimitao/control/TextUpdate.java,2/c/2c7319d161be7adf4961c0e46e16635be16d310b

@@ -1,4 +1,4 @@
-package apps.poo2017.com.br.jogodaimitao.constats;
+package apps.poo2017.com.br.jogodaimitao.constants;
 
 import apps.poo2017.com.br.jogodaimitao.R;
 

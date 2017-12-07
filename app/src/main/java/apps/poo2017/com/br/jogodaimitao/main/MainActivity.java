@@ -1,27 +1,16 @@
 package apps.poo2017.com.br.jogodaimitao.main;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import apps.poo2017.com.br.jogodaimitao.R;
-import apps.poo2017.com.br.jogodaimitao.constats.MicrophoneImage;
+import apps.poo2017.com.br.jogodaimitao.constants.Cores;
+import apps.poo2017.com.br.jogodaimitao.constants.MicrophoneImage;
 import apps.poo2017.com.br.jogodaimitao.speechtotext.SpeechToText;
 import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 import apps.poo2017.com.br.jogodaimitao.viewholder.ViewHolder;
@@ -50,11 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);
         this.mViewHolder.textView = (TextView) findViewById(R.id.textView);
         this.mViewHolder.progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        this.mViewHolder.progressBar.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
 
         if(!pressed_button){
             this.mViewHolder.imageButton.setBackgroundResource(MicrophoneImage.NORMAL_MODE.getMicrophoneId());
         }
-
 
         this.mViewHolder.imageButton.setOnClickListener(this);
 
@@ -71,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case (R.id.imageButton):
                 if(!pressed_button){
+                    mViewHolder.progressBar.setProgress(0);
                     mViewHolder.imageButton.setBackgroundResource(
                             MicrophoneImage.REC_MODE.getMicrophoneId());
                     texToSpeech.stopTalking();

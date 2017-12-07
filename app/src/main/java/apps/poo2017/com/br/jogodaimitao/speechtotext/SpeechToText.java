@@ -14,6 +14,7 @@ import apps.poo2017.com.br.jogodaimitao.control.TextUpdate;
 import apps.poo2017.com.br.jogodaimitao.control.VoiceControl;
 import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 import apps.poo2017.com.br.jogodaimitao.R;
+import apps.poo2017.com.br.jogodaimitao.texttoespeech.TexToSpeech;
 
 /**
  * Classe para converter voz em texto
@@ -66,6 +67,11 @@ public class SpeechToText implements RecognitionListener{
     public void onRmsChanged(float rmsdB) {
        // retorna o nível de decibéis do som
         Log.d("onRmsChanged", "" + rmsdB);
+
+        int vol = (int)rmsdB + 2;
+        vol = vol * 8;
+
+        mainActivity.mViewHolder.progressBar.setProgress(vol);
     }
 
     @Override
@@ -91,8 +97,10 @@ public class SpeechToText implements RecognitionListener{
          // retorna o resultado final da audição
         mainActivity.mViewHolder.imageButton.setBackgroundResource(R.mipmap.microphone);
         mainActivity.texToSpeech.toPronounce(textUpdate.getText());
+
         VoiceControl voiceControl = new VoiceControl(mainActivity);
         voiceControl.takesCommand(textUpdate.getText());
+
         iniciar.parar();
     }
 

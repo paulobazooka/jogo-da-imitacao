@@ -37,7 +37,10 @@ public class MainControl {
         }
     }
 
+    public void changeImageButton(){
+    }
+
     public void changeButtonImage(){
-        // implementar...
+
     }
 }
