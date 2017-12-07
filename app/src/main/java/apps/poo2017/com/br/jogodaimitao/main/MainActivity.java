@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);
         this.mViewHolder.textView = (TextView) findViewById(R.id.textView);
         this.mViewHolder.progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        this.mViewHolder.progressBar.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
+       // this.mViewHolder.progressBar.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
 
         if(!pressed_button){
 

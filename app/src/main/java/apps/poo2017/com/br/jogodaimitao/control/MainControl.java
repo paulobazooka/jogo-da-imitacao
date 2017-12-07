@@ -25,16 +25,16 @@ public class MainControl {
         mViewHolder = ViewHolder.getInstance();
     }
 
-    public void changeColorActionBar(int color){
+    private void changeColorActionBar(int color){
         android.support.v7.app.ActionBar bar = mainActivity.getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(ContextCompat.getColor(mainActivity, color)));
     }
 
-    public void changeColorText(int color){
+    private void changeColorText(int color){
         mViewHolder.textView.setTextColor(ContextCompat.getColor(mainActivity, color));
     }
 
-    public void changeColorStatusBar(int color){
+    private void changeColorStatusBar(int color){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             mainActivity.getWindow().setStatusBarColor(mainActivity.getResources().getColor(color));
         }
@@ -42,5 +42,12 @@ public class MainControl {
 
     public void changeButtonImage(int image){
         mViewHolder.imageButton.setBackgroundResource(image);
+    }
+
+    public void changeColors(int color){
+        changeColorStatusBar(color);
+        changeColorActionBar(color);
+        changeColorText(color);
+
     }
 }

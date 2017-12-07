@@ -37,45 +37,31 @@ public class VoiceControl {
               Log.e("Comando:", command);
 
               if(command.contains(Comandos.AMARELO.getComando())){
-                 mainControl.changeColorActionBar(Cores.AMARELO.getCor());
-                 mainControl.changeColorText(Cores.AMARELO.getCor());
-                 mainControl.changeColorStatusBar(Cores.AMARELO.getCor());
+                 mainControl.changeColors(Cores.AMARELO.getCor());
                  Log.e("Cor:", "Amarelo");
              }else
              if(command.contains(Comandos.VERMELHO.getComando())){
-                 mainControl.changeColorActionBar(Cores.VERMELHO.getCor());
-                 mainControl.changeColorText(Cores.VERMELHO.getCor());
-                 mainControl.changeColorStatusBar(Cores.VERMELHO.getCor());
+                 mainControl.changeColors(Cores.VERMELHO.getCor());
                  Log.e("Cor:", "Vermelho");
              }else
              if(command.contains(Comandos.VERDE.getComando())){
-                 mainControl.changeColorActionBar(Cores.VERDE.getCor());
-                 mainControl.changeColorText(Cores.VERDE.getCor());
-                 mainControl.changeColorStatusBar(Cores.VERDE.getCor());
+                 mainControl.changeColors(Cores.VERDE.getCor());
                  Log.e("Cor:", "Verde");
              }else
              if(command.contains(Comandos.AZUL_CLARO.getComando())){
-                 mainControl.changeColorActionBar(Cores.AZUL_CLARO.getCor());
-                 mainControl.changeColorText(Cores.AZUL_CLARO.getCor());
-                 mainControl.changeColorStatusBar(Cores.AZUL_CLARO.getCor());
+                 mainControl.changeColors(Cores.AZUL_CLARO.getCor());
                  Log.e("Cor:", "Azul Claro");
              }else
              if(command.contains(Comandos.AZUL_ESCURO.getComando())){
-                 mainControl.changeColorActionBar(Cores.AZUL_ESCURO.getCor());
-                 mainControl.changeColorText(Cores.AZUL_ESCURO.getCor());
-                 mainControl.changeColorStatusBar(Cores.AZUL_ESCURO.getCor());
+                 mainControl.changeColors(Cores.AZUL_ESCURO.getCor());
                  Log.e("Cor:", "Azul Escuro");
              }else
              if(command.contains(Comandos.CINZA.getComando())){
-                 mainControl.changeColorActionBar(Cores.CINZA.getCor());
-                 mainControl.changeColorText(Cores.CINZA.getCor());
-                 mainControl.changeColorStatusBar(Cores.CINZA.getCor());
+                 mainControl.changeColors(Cores.CINZA.getCor());
                  Log.e("Cor:", "Cinza");
              }else
              if(command.contains(Comandos.PRETO.getComando())){
-                 mainControl.changeColorActionBar(Cores.PRETO.getCor());
-                 mainControl.changeColorText(Cores.PRETO.getCor());
-                 mainControl.changeColorStatusBar(Cores.PRETO.getCor());
+                 mainControl.changeColors(Cores.PRETO.getCor());
                  Log.e("Cor:", "Preto");
              }
 
