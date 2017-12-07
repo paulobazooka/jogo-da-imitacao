@@ -11,9 +11,24 @@ import android.widget.TextView;
 
 public class ViewHolder {
 
-    public TextView textView;
-    public ActionBar actionBar;
-    public ImageButton imageButton;
-    public ProgressBar progressBar;
+    protected static ViewHolder viewHolder;
+
+    public static TextView textView;
+    public static ActionBar actionBar;
+    public static ImageButton imageButton;
+    public static ProgressBar progressBar;
+
+
+    protected ViewHolder(){
+
+    }
+
+    public static ViewHolder getInstance(){
+        if(viewHolder == null){
+            viewHolder = new ViewHolder();
+        }
+
+        return viewHolder;
+    }
     
 }

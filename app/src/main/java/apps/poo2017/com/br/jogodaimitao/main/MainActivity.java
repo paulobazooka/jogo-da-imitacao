@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         speechToText = new SpeechToText(this);
         texToSpeech = new TexToSpeech(this);
-        mViewHolder = new ViewHolder();
+        mViewHolder = ViewHolder.getInstance();
 
         //
         this.mViewHolder.imageButton = (ImageButton) findViewById(R.id.imageButton);
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.progressBar.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
 
         if(!pressed_button){
+
             this.mViewHolder.imageButton.setBackgroundResource(MicrophoneImage.NORMAL_MODE.getMicrophoneId());
         }
 

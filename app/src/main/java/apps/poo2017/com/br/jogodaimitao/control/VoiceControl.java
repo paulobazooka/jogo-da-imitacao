@@ -55,7 +55,7 @@ public class VoiceControl {
                  Log.e("Cor:", "Verde");
              }else
              if(command.contains(Comandos.AZUL_CLARO.getComando())){
-                 mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(context, R.color.light_blue));
+                 mainControl.changeColorActionBar(Cores.AZUL_CLARO.getCor());
                  mainControl.changeColorText(Cores.AZUL_CLARO.getCor());
                  mainControl.changeColorStatusBar(Cores.AZUL_CLARO.getCor());
                  Log.e("Cor:", "Azul Claro");

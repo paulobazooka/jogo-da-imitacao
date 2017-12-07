@@ -5,7 +5,9 @@ import android.os.Build;
 import android.support.v4.content.ContextCompat;
 
 import apps.poo2017.com.br.jogodaimitao.R;
+import apps.poo2017.com.br.jogodaimitao.constants.MicrophoneImage;
 import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
+import apps.poo2017.com.br.jogodaimitao.viewholder.ViewHolder;
 
 /**
  * Classe para controlar mainActivity
@@ -15,11 +17,12 @@ import apps.poo2017.com.br.jogodaimitao.main.MainActivity;
 public class MainControl {
 
     private MainActivity mainActivity;
-    private static boolean changedButtonImage = false;
+    private ViewHolder mViewHolder;
 
 
     public MainControl(MainActivity mainActivity){
         this.mainActivity = mainActivity;
+        mViewHolder = ViewHolder.getInstance();
     }
 
     public void changeColorActionBar(int color){
@@ -28,7 +31,7 @@ public class MainControl {
     }
 
     public void changeColorText(int color){
-        mainActivity.mViewHolder.textView.setTextColor(ContextCompat.getColor(mainActivity, color));
+        mViewHolder.textView.setTextColor(ContextCompat.getColor(mainActivity, color));
     }
 
     public void changeColorStatusBar(int color){
@@ -37,10 +40,7 @@ public class MainControl {
         }
     }
 
-    public void changeImageButton(){
-    }
-
-    public void changeButtonImage(){
-
+    public void changeButtonImage(int image){
+        mViewHolder.imageButton.setBackgroundResource(image);
     }
 }
